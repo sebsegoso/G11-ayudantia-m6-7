@@ -5,7 +5,7 @@
     <div v-else>
       <div class="row">
         <RouterLink
-          class="col-6"
+          class="col-12 col-lg-6 my-2"
           v-for="product in products"
           :key="product.id"
           :to="{ name: 'productDetail', params: { id: product.id } }"
@@ -46,5 +46,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+a {
+  text-decoration: none;
+}
 </style>
