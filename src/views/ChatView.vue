@@ -1,5 +1,5 @@
 <template>
-  <MyChat />
+  <main class="container"><MyChat /></main>
 </template>
 
 <script>

@@ -1,7 +1,10 @@
 <template>
-  <p v-if="loading || !product">Cargando producto...</p>
-  <div v-else>
-    <ProductItem :product="product" />
+  <div class="container">
+    <p v-if="loading || !product">Cargando producto...</p>
+    <div v-else>
+      <RouterLink :to="{ name: 'products' }">Volver a productos</RouterLink>
+      <ProductItem :product="product" />
+    </div>
   </div>
 </template>
 
