@@ -18,4 +18,12 @@ export default {
 </template>
 
 <style scoped>
+nav a {
+  color: #aaa;
+}
+.router-link-exact-active,
+.router-link-active {
+  color: #111;
+  font-weight: 700;
+}
 </style>

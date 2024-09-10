@@ -1,5 +1,5 @@
 <template>
-  <div class="chat-box d-flex flex-column py-3">
+  <div class="chat-box d-flex flex-column py-3" ref="chatBox">
     <div
       v-for="(mensaje, index) in mensajes"
       :key="index"
@@ -18,7 +18,16 @@
 
 <script>
 export default {
-  props: ['mensajes']
+  props: ['mensajes'],
+  updated() {
+    const refs = this.$refs.chatBox
+    console.dir(refs)
+
+    const lastChildElement = this.$refs.chatBox.lastElementChild
+    lastChildElement?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
 }
 </script>
 

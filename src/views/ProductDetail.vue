@@ -2,7 +2,7 @@
   <div class="container">
     <p v-if="loading || !product">Cargando producto...</p>
     <div v-else>
-      <RouterLink :to="{ name: 'products' }">Volver a productos</RouterLink>
+      <RouterLink :to="{ name: 'products' }"><button>Volver a productos</button></RouterLink>
       <ProductItem :product="product" />
     </div>
   </div>
