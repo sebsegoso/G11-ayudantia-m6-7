@@ -4,12 +4,12 @@
   <div v-else class="container">
     <div class="row">
       <RouterLink
-        class="col-6 h-100"
+        class="col-6"
         v-for="product in products"
         :key="product.id"
         :to="{ name: 'productDetail', params: { id: product.id } }"
       >
-        <ProductItem class="h-100" :product="product" />
+        <ProductItem class="" :product="product" />
       </RouterLink>
     </div>
   </div>
