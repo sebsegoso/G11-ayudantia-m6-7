@@ -10,7 +10,7 @@
           :key="product.id"
           :to="{ name: 'productDetail', params: { id: product.id } }"
         >
-          <ProductItem class="" :product="product" />
+          <ProductItem class="" :product="product" hideDescription />
         </RouterLink>
       </div>
     </div>

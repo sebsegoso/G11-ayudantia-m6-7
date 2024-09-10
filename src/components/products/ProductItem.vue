@@ -8,7 +8,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ product.title }}</h5>
           <p class="card-text"><strong>Categoría:</strong> {{ product.category }}</p>
-          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text" v-if="!hideDescription">{{ product.description }}</p>
           <p class="card-text"><strong>Precio:</strong> ${{ product.price }}</p>
           <p class="card-text">
             <strong>Calificación:</strong> {{ product.rating.rate }}
@@ -26,6 +26,10 @@ export default {
     product: {
       type: Object,
       required: true
+    },
+    hideDescription: {
+      type: Boolean,
+      default: false
     }
   }
 }

@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <p v-if="loading || !product">Cargando producto...</p>
-    <div v-else>
-      <RouterLink :to="{ name: 'products' }"><button>Volver a productos</button></RouterLink>
+    <div v-else class="d-flex flex-column gap-4">
       <ProductItem :product="product" />
+      <RouterLink :to="{ name: 'products' }"><button>Volver a productos</button></RouterLink>
     </div>
   </div>
 </template>
