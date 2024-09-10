@@ -10,6 +10,7 @@ export default {
 
 <template>
   <nav class="py-3 px-1 container d-flex gap-4">
+    <RouterLink :to="{ name: 'hooks' }">Ejemplo hooks</RouterLink>
     <RouterLink :to="{ name: 'products' }">Ejemplo tienda</RouterLink>
     <RouterLink :to="{ name: 'chat' }">Ejemplo chat</RouterLink>
   </nav>

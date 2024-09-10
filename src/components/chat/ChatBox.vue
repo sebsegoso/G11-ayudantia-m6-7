@@ -18,12 +18,16 @@
 
 <script>
 export default {
-  props: ['mensajes'],
+  props: {
+    mensajes: {
+      type: Array,
+      required: true
+    }
+  },
   updated() {
-    const refs = this.$refs.chatBox
-    console.dir(refs)
+    const chatBox = this.$refs.chatBox
+    const lastChildElement = chatBox.lastElementChild
 
-    const lastChildElement = this.$refs.chatBox.lastElementChild
     lastChildElement?.scrollIntoView({
       behavior: 'smooth'
     })
@@ -50,7 +54,7 @@ export default {
 .chat-box__message {
   border-radius: 12px;
   width: fit-content;
-  max-width: 80%;
+  /* max-width: 80%; */
 }
 .izquierda {
   text-align: left;

@@ -11,6 +11,11 @@ const router = createRouter({
       redirect: { name: 'products' }
     },
     {
+      path: '/hooks',
+      name: 'hooks',
+      component: () => import('@/views/HooksView.vue')
+    },
+    {
       path: '/products',
       name: 'products',
       component: () => import('../views/ProductsView.vue')

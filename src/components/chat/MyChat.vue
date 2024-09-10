@@ -8,9 +8,9 @@
   <!-- no loading y existen ambos usuarios -->
   <div v-else-if="usuarios.izquierda && usuarios.derecha" class="container-fluid">
     <div class="row">
-      <UserChat class="col-3" :usuario="usuarios.izquierda" @mensaje-enviado="agregarMensaje" />
+      <UserChat class="col-3" :usuario="usuarios.izquierda" @mensaje-envia2="agregarMensaje" />
       <ChatBox class="col-6" :mensajes="mensajes" />
-      <UserChat class="col-3" :usuario="usuarios.derecha" @mensaje-enviado="agregarMensaje" />
+      <UserChat class="col-3" :usuario="usuarios.derecha" @mensaje-envia2="agregarMensaje" />
     </div>
   </div>
   <!-- no loading y no existen usuarios -->
@@ -45,6 +45,7 @@ export default {
       try {
         const response = await axios.get('https://randomuser.me/api/?results=2')
         const usuarios = response.data.results
+
         this.usuarios = {
           izquierda: { ...usuarios[0], lado: 'izquierda' },
           derecha: { ...usuarios[1], lado: 'derecha' }

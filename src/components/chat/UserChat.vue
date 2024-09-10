@@ -22,7 +22,7 @@
         placeholder="Escribe un mensaje"
       />
     </div>
-    <button class="w-100">Enviar</button>
+    <button class="w-100" type="submit">Enviar</button>
   </form>
 </template>
 
@@ -39,8 +39,7 @@ export default {
   methods: {
     enviarMensaje() {
       if (!this.mensaje?.trim()) return
-
-      this.$emit('mensaje-enviado', {
+      this.$emit('mensaje-envia2', {
         texto: this.mensaje.trim(),
         lado: this.usuario.lado,
         color: this.color,
