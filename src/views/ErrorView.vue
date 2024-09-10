@@ -1,5 +1,5 @@
 <template>
-  <h1>:( la página que buscas no está disponible</h1>
+  <h1 class="container">:( la página que buscas no está disponible</h1>
 </template>
 
 <script>

@@ -9,6 +9,10 @@ export default {
 </script>
 
 <template>
+  <!-- <div class="container">
+    <button @click="$router.go(-1)">atrás</button>
+    <button @click="$router.go(1)">adelante</button>
+  </div> -->
   <nav class="py-3 px-1 container d-flex gap-4">
     <RouterLink :to="{ name: 'hooks' }">Ejemplo hooks</RouterLink>
     <RouterLink :to="{ name: 'products' }">Ejemplo tienda</RouterLink>

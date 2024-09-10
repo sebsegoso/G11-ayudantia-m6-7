@@ -8,7 +8,7 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      redirect: { name: 'products' }
+      redirect: { name: 'chat' }
     },
     {
       path: '/hooks',
